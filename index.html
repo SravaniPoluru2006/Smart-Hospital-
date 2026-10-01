@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Hospital Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <nav>
+        <div class="logo">🏥 SmartCare</div>
+        <a href="#appointment" class="nav-btn">Book Appointment</a>
+      </nav>
+
+      <div class="hero-content">
+        <div>
+          <span class="badge">Smart Hospital Management</span>
+          <h1>Quality Healthcare,<br><span>Made Simple.</span></h1>
+          <p>Find doctors and book hospital appointments quickly through a simple digital platform.</p>
+          <a href="#appointment" class="primary-btn">Book an Appointment</a>
+        </div>
+        <div class="hero-card">
+          <div class="medical-icon">🩺</div>
+          <h3>Care You Can Trust</h3>
+          <p>Connect with available doctors and manage appointments easily.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats">
+      <div><strong>24/7</strong><span>Digital Access</span></div>
+      <div><strong>4+</strong><span>Departments</span></div>
+      <div><strong>Easy</strong><span>Appointment Booking</span></div>
+    </section>
+
+    <section id="appointment" class="section">
+      <div class="section-title">
+        <span>APPOINTMENT</span>
+        <h2>Book Your Appointment</h2>
+        <p>Enter your details and select a doctor.</p>
+      </div>
+
+      <div class="appointment-grid">
+        <form id="appointmentForm" class="card">
+          <label for="patient">Patient Name</label>
+          <input id="patient" name="patient" type="text" placeholder="Enter patient name" required>
+
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" type="tel" placeholder="Enter phone number" required>
+
+          <label for="doctor">Select Doctor</label>
+          <select id="doctor" name="doctor_id" required>
+            <option value="">Loading doctors...</option>
+          </select>
+
+          <label for="date">Appointment Date</label>
+          <input id="date" name="date" type="date" required>
+
+          <label for="time">Appointment Time</label>
+          <input id="time" name="time" type="time" required>
+
+          <button type="submit" class="primary-btn full">Confirm Appointment</button>
+          <p id="message" class="message"></p>
+        </form>
+
+        <div class="card">
+          <h3>Available Doctors</h3>
+          <div id="doctorList" class="doctor-list">
+            <p>Loading doctors...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <span>APPOINTMENTS</span>
+        <h2>Appointment Records</h2>
+      </div>
+
+      <div class="card table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Patient</th>
+              <th>Doctor</th>
+              <th>Department</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="appointmentTable">
+            <tr><td colspan="6">Loading appointments...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 SmartCare Hospital Management System</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
